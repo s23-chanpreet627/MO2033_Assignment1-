@@ -1,0 +1,19 @@
+using System;
+
+namespace MO2033_Assignment1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            GreetUser("Alice");
+            GreetUser("Bob");
+            GreetUser("Charlie");
+        }
+
+        static void GreetUser(string name)
+        {
+            Console.WriteLine($"Hello, {name}!");
+        }
+    }
+}
