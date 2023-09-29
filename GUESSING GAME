@@ -1,0 +1,38 @@
+using System;
+
+namespace MO2033_Assignment1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int targetNumber = random.Next(1, 101);
+            int attempts = 0;
+
+            Console.WriteLine("Welcome to the Guessing Game!");
+            Console.WriteLine("Try to guess the number between 1 and 100.");
+
+            while (true)
+            {
+                Console.Write("Enter your guess: ");
+                int userGuess = int.Parse(Console.ReadLine());
+                attempts++;
+
+                if (userGuess == targetNumber)
+                {
+                    Console.WriteLine($"Congratulations! You guessed the number {targetNumber} in {attempts} attempts.");
+                    break;
+                }
+                else if (userGuess < targetNumber)
+                {
+                    Console.WriteLine("Too low! Try again.");
+                }
+                else
+                {
+                    Console.WriteLine("Too high! Try again.");
+                }
+            }
+}
+}
+}
